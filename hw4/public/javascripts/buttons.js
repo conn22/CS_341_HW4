@@ -24,3 +24,9 @@ $(document).ready(function(){
 		}
 	});
 });
+
+//Much like baking a cake, when coding one should read the "recipe" and 
+//make sure they have all the necessary "ingredients" before beginning
+
+//Which is just a fancy way of saying that I didn't have the code for 
+//the order display working and now I can't really do part three.
