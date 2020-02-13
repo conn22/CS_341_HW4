@@ -1,7 +1,15 @@
 //Author: James Conn
 
+function getData(data, status){
+	console.log(status);
+}
+
 $(document).ready(function(){
   	$("#order").click(function(){
+		var url = "/orders";
+		var month = $("#drop-opts a:selected").text();
+		debugger;
+		$.post(url, {month: month}, getData);
 		var vegan = false;
 			//<!--The following code inspired by: https://stackoverflow.com/a/9196996-->
 		var lines = $("#instrs").val().split('\n');

@@ -10,12 +10,10 @@ var stuff = {"data": [
 	]
 }; 
 
-/* GET orders. */
-router.get('/', function(req, res, next) {
+/* POST orders. */
+router.post('/', function(req, res, next) {
 	res.jsonp(stuff);
 });
 
 
-// Note: Something in this program seems to break and prevent Express
-// 	 from functioning properly. I'm not sure if it's the object 
-//	 declaration or the function call. 
+module.exports = router;
