@@ -6,10 +6,6 @@ function getData(data, status){
 
 $(document).ready(function(){
   	$("#order").click(function(){
-		var url = "/orders";
-		var month = $("#drop-opts a:selected").text();
-		debugger;
-		$.post(url, {month: month}, getData);
 		var vegan = false;
 			//<!--The following code inspired by: https://stackoverflow.com/a/9196996-->
 		var lines = $("#instrs").val().split('\n');
@@ -31,10 +27,14 @@ $(document).ready(function(){
 			$("#instrs").hide();
 		}
 	});
+
+	$(".month").click(function(event){
+		var url = "/orders";
+		var month = $("#drop-opts a:selected").text();
+//		debugger;
+		$.post(url, {month: month}, getData);
+		var month = $(this).attr("val");
+		$("#dropbtn").html(month);
+	});
 });
 
-//Much like baking a cake, when coding one should read the "recipe" and 
-//make sure they have all the necessary "ingredients" before beginning
-
-//Which is just a fancy way of saying that I didn't have the code for 
-//the order display working and now I can't really do part three.
